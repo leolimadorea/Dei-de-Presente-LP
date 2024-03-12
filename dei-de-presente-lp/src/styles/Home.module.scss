@@ -1,0 +1,140 @@
+.container {
+  background: linear-gradient(359deg, #fff 6.23%, #07a7b3 151.65%);
+}
+
+.texts {
+  display: flex;
+  flex-direction: column;
+  padding-top: 77px;
+  padding-bottom: 60px;
+  gap: 34px;
+  justify-content: center;
+  h1 {
+    color: #fff;
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 43px; /* 86% */
+    letter-spacing: 0.167px;
+  }
+  h5 {
+    color: #fff;
+    text-align: center;
+    text-shadow: 0px 10px 30px rgba(0, 0, 0, 0.25);
+    font-family: Montserrat;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 43px; /* 179.167% */
+    letter-spacing: 0.167px;
+  }
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+
+  button {
+    color: #000;
+    font-family: Montserrat;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    display: flex;
+    padding-block: 16px;
+    padding-inline: 25px;
+    border-radius: 76px;
+    background-color: #fff;
+    border: 2px solid #000;
+    gap: 10px;
+    img {
+      width: 24px;
+      height: 24px;
+    }
+  }
+}
+
+.movingBars {
+  padding-block: 100px;
+}
+
+.topBar {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  background: rgba(7, 167, 179, 0.8);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(9.798324585px);
+  backdrop-filter: blur(9.798324585px);
+  width: 100%;
+  transform: rotate(5deg);
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+  z-index: 10;
+  padding-block: 30px;
+  position: relative;
+  right: 10px;
+  width: 110%;
+}
+
+.topBarContent {
+  display: flex;
+  position: absolute;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  width: 100%;
+  animation: scrolling-left 20s linear infinite;
+}
+
+@keyframes scrolling-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+@keyframes scrolling-right {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.bottomBar {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  background: #fff;
+  -webkit-backdrop-filter: blur(9.798324585px);
+  backdrop-filter: blur(9.798324585px);
+  width: 100%;
+  padding-block: 18px;
+  transform: rotate(-5deg);
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+  margin-bottom: 15px;
+  filter: blur(1.2247905731px);
+  padding-block: 30px;
+}
+
+.bottomBarContent {
+  display: flex;
+  position: absolute;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  width: 100%;
+  animation: scrolling-right 20s linear infinite;
+  span {
+    color: #000;
+  }
+}

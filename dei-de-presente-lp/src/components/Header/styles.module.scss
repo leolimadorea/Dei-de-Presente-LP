@@ -1,0 +1,68 @@
+.container {
+  background-color: #fff;
+}
+.content {
+  display: flex;
+  padding-block: 20px;
+  padding-inline: 40px;
+  align-items: center;
+}
+
+.rightside {
+  display: flex;
+
+  align-items: center;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+.themes {
+  display: flex;
+  gap: 43px;
+  h5 {
+    color: #000;
+    font-family: Montserrat;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+  }
+}
+
+.hr {
+  opacity: 0.3;
+  background: #000;
+  margin-inline: 54px;
+  width: 2px;
+  height: 60px;
+}
+
+.buttons {
+  display: flex;
+  gap: 54px;
+
+  .enter {
+    background: none;
+    color: #000;
+    border: none;
+    font-family: Montserrat;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    cursor: pointer;
+  }
+
+  .create {
+    border-radius: 76px;
+    background-color: #fff;
+    border: 2px solid #000;
+    color: #000;
+
+    font-family: Montserrat;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    padding-block: 16px;
+    padding-inline: 60px;
+    cursor: pointer;
+  }
+}
