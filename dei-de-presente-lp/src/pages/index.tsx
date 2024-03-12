@@ -1,14 +1,45 @@
 import ImageCarousel from "@/components/Carousel";
 import Header from "@/components/Header";
 import styles from "@/styles/Home.module.scss";
-import React from "react";
+import React, { useState } from "react";
+
+interface Theme {
+  id: number;
+  name: string;
+  description: string;
+  image: string;
+}
+
+const themes: Theme[] = [
+  {
+    id: 1,
+    name: "BALADA",
+    description: "Tema de festa, um dos mais modernos e extravagantes.",
+    image: "/images/balada.png",
+  },
+  {
+    id: 2,
+    name: "CASAMENTO",
+    description: "Tema minimalista, com muito sentimento e elegância.",
+    image: "/images/casamento.png",
+  },
+  {
+    id: 3,
+    name: "ANIVERSÁRIO",
+    description:
+      "Seguindo a temática de aniversário, ideal para qualquer celebração de aniversário",
+    image: "/images/aniversario.png",
+  },
+];
 
 export default function Home() {
+  const [hoveredTheme, setHoveredTheme] = useState<Theme>(themes[0]);
+
   return (
     <>
       <Header />
       <main className={styles.container}>
-        <div className={styles.texts}>
+        <div className={styles.title}>
           <h1>Dar e receber presentes ficou ainda melhor!</h1>
           <h5>
             com o <strong>dei de presente</strong> você tem um site para o seu
@@ -43,6 +74,94 @@ export default function Home() {
               ))}
             </div>
           </div>
+        </div>
+        <div className={styles.images}>
+          <div className={styles.texts}>
+            <h1>Como Funciona?</h1>
+            <h5>
+              Abaixo está um exemplo de como criar um site para seu evento!
+            </h5>
+          </div>
+          <div className={styles.iconHowWorks}>
+            <div className={styles.icons}>
+              <img src="/brush.svg" />
+              <h2>Template</h2>
+              <p>
+                Escolha o template que mais combina <br />
+                com seu evento e crie seu site.
+              </p>
+            </div>
+            <div className={styles.icons}>
+              <img src="/rightArrow.svg" />
+            </div>
+            <div className={styles.icons}>
+              <img src="/laptop.svg" />
+              <h2>Lista de presentes</h2>
+              <p>
+                Faça uma lista com os presentes <br />
+                exclusivos da sua festa!
+              </p>
+            </div>
+            <div className={styles.icons}>
+              <img src="/bottomArrow.svg" />
+            </div>
+            <div className={styles.icons}>
+              <img src="/rocket.svg" />
+              <h2>Pronto!</h2>
+              <p>
+                Agora é so compartilhar o link com seus <br />
+                convidados!
+              </p>
+            </div>
+            <div className={styles.icons}>
+              <img src="/rightArrow.svg" />
+            </div>
+            <div className={styles.icons}>
+              <img src="/handshake.svg" />
+              <h2>Retirada</h2>
+              <p>
+                No fim do evento você retira o valor <br />
+                equivalente aos presentes que ganhou
+              </p>
+            </div>
+          </div>
+        </div>
+        <div className={styles.virtualStore}>
+          <div className={styles.subTitle}>
+            <h5>Crie uma loja virtual</h5>
+            <p>Sua loja do seu jeito</p>
+          </div>
+          <div className={styles.sitePreview}>
+            <img src="/sitePreview.svg" />
+          </div>
+        </div>
+        <div className={styles.themesContainer}>
+          <div className={styles.optionsList}>
+            {themes.map((theme) => (
+              <div
+                key={theme.id}
+                className={styles.option}
+                onMouseEnter={() => setHoveredTheme(theme)}
+                onMouseLeave={() => setHoveredTheme(themes[0])}
+              >
+                <div className={styles.optionContent}>
+                  <h3 className={styles.optionTitle}>{theme.name}</h3>
+                  <p className={styles.optionDescription}>
+                    {theme.description}
+                  </p>
+                </div>
+                {hoveredTheme?.id === theme.id && (
+                  <button className={styles.myButton}>Quero o meu</button>
+                )}
+              </div>
+            ))}
+          </div>
+          {hoveredTheme && (
+            <div className={styles.displayArea}>
+              <img src={hoveredTheme.image} alt={hoveredTheme.name} />
+            </div>
+          )}
+             
         </div>
       </main>
     </>

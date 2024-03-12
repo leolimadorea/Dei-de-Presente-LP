@@ -1,20 +1,16 @@
-import SwiperCore, {
-  default as Navigation,
-  default as Pagination,
-} from "swiper";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+import { Navigation, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
-
-SwiperCore.use([Navigation, Pagination]);
 
 const ImageCarousel: React.FC = () => {
   return (
     <Swiper
       modules={[Navigation, Pagination]}
       spaceBetween={50}
-      slidesPerView={1}
+      slidesPerView={3}
+      effect="carousel"
       navigation
       pagination={{ clickable: true }}
     >
