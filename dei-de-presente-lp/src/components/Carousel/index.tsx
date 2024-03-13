@@ -10,10 +10,14 @@ const ImageCarousel: React.FC = () => {
       modules={[Navigation, Pagination]}
       spaceBetween={50}
       slidesPerView={3}
-      effect="carousel"
       navigation
       pagination={{ clickable: true }}
+      loop={true}
+      centeredSlides={true}
     >
+      <SwiperSlide>{<img src="/wedding.svg" />}</SwiperSlide>
+      <SwiperSlide>{<img src="/nightclub.svg" />}</SwiperSlide>
+      <SwiperSlide>{<img src="/birthday.svg" />}</SwiperSlide>
       <SwiperSlide>{<img src="/wedding.svg" />}</SwiperSlide>
       <SwiperSlide>{<img src="/nightclub.svg" />}</SwiperSlide>
       <SwiperSlide>{<img src="/birthday.svg" />}</SwiperSlide>

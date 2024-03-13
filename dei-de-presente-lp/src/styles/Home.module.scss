@@ -121,7 +121,7 @@
   display: flex;
   align-items: center;
   gap: 30px;
-  background: #fff;
+  background: #e1fcfe;
   -webkit-backdrop-filter: blur(9.798324585px);
   backdrop-filter: blur(9.798324585px);
   width: 100%;
@@ -132,7 +132,7 @@
   position: relative;
   margin-bottom: 15px;
   filter: blur(1.2247905731px);
-  padding-block: 30px;
+  padding-block: 40px;
 }
 
 .bottomBarContent {
@@ -324,5 +324,33 @@
     height: auto;
     display: block;
     border-radius: 8px;
+  }
+}
+
+.round {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url("/background.svg");
+}
+
+.leftside {
+  h5 {
+    color: #057780;
+    font-family: Montserrat;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 43px; /* 86% */
+    letter-spacing: 0.167px;
+  }
+  p {
+    color: #057780;
+    font-family: Montserrat;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 43px; /* 179.167% */
+    letter-spacing: 0.167px;
   }
 }

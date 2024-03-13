@@ -15,7 +15,7 @@ const themes: Theme[] = [
     id: 1,
     name: "BALADA",
     description: "Tema de festa, um dos mais modernos e extravagantes.",
-    image: "/images/balada.png",
+    image: "/festa.svg",
   },
   {
     id: 2,
@@ -161,7 +161,19 @@ export default function Home() {
               <img src={hoveredTheme.image} alt={hoveredTheme.name} />
             </div>
           )}
-             
+        </div>
+        <div className={styles.round}>
+          <div className={styles.leftSide}>
+            <h5>A sua festa pode fazer diferença na vida de alguém!</h5>
+            <p>
+              com o <strong>dei de presente</strong> você pode destinar 1% do
+              valor arrecadado ao <strong> Hospital Erasto Gartner</strong> em
+              Curitiba!
+            </p>
+          </div>
+          <div className={styles.rightside}>
+            <img src="/dance.svg" />
+          </div>
         </div>
       </main>
     </>
