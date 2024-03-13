@@ -144,6 +144,15 @@ export default function Home() {
           </div>
         </div>
         <div className={styles.themesContainer}>
+          <div className={styles.themeTitle}>
+            <h5>TEMAS</h5>
+            <span>
+              Temas de <p>alto padrão,</p>
+            </span>
+            <span>
+              seu evento <p>inesquecível</p>
+            </span>
+          </div>
           <div className={styles.themesContent}>
             <div className={styles.optionsList}>
               {themes.map((theme, index) => (
