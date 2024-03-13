@@ -1,13 +1,12 @@
-.swiper-slide {
+.swiperSlide {
   display: flex;
   justify-content: center;
   align-items: center;
   max-width: 1440px;
-}
-
-.swiper-slide img {
-  width: 100%;
-  height: auto;
+  img {
+    width: 100%;
+    height: auto;
+  }
 }
 
 .swiper-slide.swiper-slide-prev {
