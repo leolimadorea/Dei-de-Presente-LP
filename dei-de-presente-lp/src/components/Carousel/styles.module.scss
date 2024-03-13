@@ -2,9 +2,15 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  max-width: 1440px;
 }
 
 .swiper-slide img {
   width: 100%;
   height: auto;
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
 }

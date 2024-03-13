@@ -1,4 +1,5 @@
 import ImageCarousel from "@/components/Carousel";
+import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import styles from "@/styles/Home.module.scss";
 import React, { useState } from "react";
@@ -15,37 +16,42 @@ const themes: Theme[] = [
     id: 1,
     name: "BALADA",
     description: "Tema de festa, um dos mais modernos e extravagantes.",
-    image: "/festa.svg",
+    image: "/nightclub.svg",
   },
   {
     id: 2,
     name: "CASAMENTO",
     description: "Tema minimalista, com muito sentimento e elegância.",
-    image: "/images/casamento.png",
+    image: "/wedding.svg",
   },
   {
     id: 3,
     name: "ANIVERSÁRIO",
     description:
       "Seguindo a temática de aniversário, ideal para qualquer celebração de aniversário",
-    image: "/images/aniversario.png",
+    image: "/birthday.svg",
   },
 ];
 
 export default function Home() {
-  const [hoveredTheme, setHoveredTheme] = useState<Theme>(themes[0]);
+  const [selectedTheme, setSelectedTheme] = useState<Theme>(themes[0]);
 
   return (
     <>
       <Header />
       <main className={styles.container}>
         <div className={styles.title}>
-          <h1>Dar e receber presentes ficou ainda melhor!</h1>
-          <h5>
-            com o <strong>dei de presente</strong> você tem um site para o seu
-            evento e cria listas de uma maneira prática, rápida e muuuuito
-            fácil.
-          </h5>
+          <h1>Dar e receber presentes </h1>
+          <h1>ficou ainda melhor!</h1>
+          <div>
+            <h5>
+              com o <strong>dei de presente</strong> você tem um site para o seu
+              evento e
+            </h5>
+            <h5>
+              cria listas de uma maneira prática, rápida e muuuuito fácil.
+            </h5>
+          </div>
         </div>
         <ImageCarousel />
         <div className={styles.button}>
@@ -126,55 +132,68 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className={styles.virtualStore}>
-          <div className={styles.subTitle}>
-            <h5>Crie uma loja virtual</h5>
-            <p>Sua loja do seu jeito</p>
-          </div>
-          <div className={styles.sitePreview}>
-            <img src="/sitePreview.svg" />
+        <div className={styles.virtualStoreContainer}>
+          <div className={styles.virtualStore}>
+            <div className={styles.subTitle}>
+              <h5>Crie uma loja virtual</h5>
+              <p>Sua loja do seu jeito</p>
+            </div>
+            <div className={styles.sitePreview}>
+              <img src="/sitePreview.svg" />
+            </div>
           </div>
         </div>
         <div className={styles.themesContainer}>
-          <div className={styles.optionsList}>
-            {themes.map((theme) => (
-              <div
-                key={theme.id}
-                className={styles.option}
-                onMouseEnter={() => setHoveredTheme(theme)}
-                onMouseLeave={() => setHoveredTheme(themes[0])}
-              >
-                <div className={styles.optionContent}>
-                  <h3 className={styles.optionTitle}>{theme.name}</h3>
-                  <p className={styles.optionDescription}>
-                    {theme.description}
-                  </p>
+          <div className={styles.themesContent}>
+            <div className={styles.optionsList}>
+              {themes.map((theme, index) => (
+                <div
+                  key={theme.id}
+                  className={`${styles.option} ${
+                    selectedTheme.id === theme.id ? styles.selected : ""
+                  }`}
+                  onClick={() => setSelectedTheme(theme)}
+                >
+                  <span className={styles.optionNumber}>
+                    {(index + 1).toString().padStart(2, "0")}
+                  </span>
+                  <div className={styles.optionContainer}>
+                    <div className={styles.optionContent}>
+                      <h3 className={styles.optionTitle}>{theme.name}</h3>
+                      <p className={styles.optionDescription}>
+                        {theme.description}
+                      </p>
+                    </div>
+                    {selectedTheme?.id === theme.id && (
+                      <button className={styles.myButton}>Quero o meu</button>
+                    )}
+                  </div>
                 </div>
-                {hoveredTheme?.id === theme.id && (
-                  <button className={styles.myButton}>Quero o meu</button>
-                )}
-              </div>
-            ))}
-          </div>
-          {hoveredTheme && (
-            <div className={styles.displayArea}>
-              <img src={hoveredTheme.image} alt={hoveredTheme.name} />
+              ))}
             </div>
-          )}
+            {selectedTheme && (
+              <div className={styles.displayArea}>
+                <img src={selectedTheme.image} alt={selectedTheme.name} />
+              </div>
+            )}
+          </div>
         </div>
         <div className={styles.round}>
-          <div className={styles.leftSide}>
-            <h5>A sua festa pode fazer diferença na vida de alguém!</h5>
-            <p>
-              com o <strong>dei de presente</strong> você pode destinar 1% do
-              valor arrecadado ao <strong> Hospital Erasto Gartner</strong> em
-              Curitiba!
-            </p>
-          </div>
-          <div className={styles.rightside}>
-            <img src="/dance.svg" />
+          <div className={styles.roundContent}>
+            <div className={styles.leftSide}>
+              <h5>A sua festa pode fazer diferença na vida de alguém!</h5>
+              <p>
+                com o <strong>dei de presente</strong> você pode destinar 1% do
+                valor arrecadado ao <strong> Hospital Erasto Gartner</strong> em
+                Curitiba!
+              </p>
+            </div>
+            <div className={styles.rightside}>
+              <img src="/dance.svg" />
+            </div>
           </div>
         </div>
+        <Footer />
       </main>
     </>
   );

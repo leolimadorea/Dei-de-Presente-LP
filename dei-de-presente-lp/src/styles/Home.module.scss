@@ -3,6 +3,8 @@
 }
 
 .title {
+  max-width: 1440px;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   padding-top: 77px;
@@ -156,6 +158,7 @@
 
 .images {
   background-color: #fff;
+
   h1 {
     color: #000;
     font-family: Montserrat;
@@ -185,6 +188,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  max-width: 1440px;
+  margin: 0 auto;
 }
 
 .iconHowWorks {
@@ -192,6 +197,8 @@
   justify-content: space-between;
   align-items: center;
   padding: 4rem;
+  max-width: 1440px;
+  margin: 0 auto;
 }
 
 .icons {
@@ -199,6 +206,8 @@
   flex-direction: column;
   align-items: center;
   gap: 30px;
+  max-width: 1440px;
+  margin: 0 auto;
 
   h2 {
     color: var(--Black, #1a202c);
@@ -207,7 +216,7 @@
     font-size: 24px;
     font-style: normal;
     font-weight: 600;
-    line-height: 150%; /* 36px */
+    line-height: 150%;
     letter-spacing: -0.48px;
   }
 
@@ -218,16 +227,21 @@
     font-size: 14px;
     font-style: normal;
     font-weight: 500;
-    line-height: 175%; /* 24.5px */
+    line-height: 175%;
     letter-spacing: -0.28px;
   }
+}
+
+.virtualStoreContainer {
+  background: #f9fafb;
 }
 
 .virtualStore {
   display: flex;
   flex-direction: column;
-  background: #f9fafb;
+  max-width: 1440px;
   padding-left: 90px;
+  margin: 0 auto;
 }
 
 .subTitle {
@@ -236,6 +250,8 @@
   gap: 10px;
   padding-bottom: 60px;
   padding-top: 84px;
+  max-width: 1440px;
+
   h5 {
     color: #07a7b3;
     font-family: Montserrat;
@@ -259,12 +275,17 @@
 }
 
 .themesContainer {
+  background: #057780;
+}
+
+.themesContent {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  background: #057780;
   padding: 20px;
   color: #fff;
+  max-width: 1440px;
+  margin: 0 auto;
 }
 
 .optionsList {
@@ -272,21 +293,44 @@
   display: flex;
   flex-direction: column;
 }
+.optionContainer {
+  align-items: center;
+}
 
 .option {
-  background: #0290a1;
+  display: flex;
+  background: none;
   padding: 20px;
   border-radius: 8px;
   margin-bottom: 20px;
   transition: background-color 0.3s ease;
+  cursor: pointer;
 
-  &:hover {
-    background: #048c9e;
-    border-left: 5px solid #ffc107;
+  .optionNumber {
+    margin-right: 20px; // Adjust spacing as needed
+    color: #fff;
+    font-family: Montserrat;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
 
-    .myButton {
-      display: block;
-    }
+  .myButton {
+    display: none;
+  }
+}
+
+.option.selected {
+  border-left: 5px solid #fff;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.15) 65.74%,
+    rgba(255, 255, 255, 0) 101.31%
+  );
+
+  .myButton {
+    display: block;
   }
 }
 
@@ -295,26 +339,40 @@
 }
 
 .optionTitle {
-  font-size: 1.5em;
+  color: #fff;
+  font-family: Montserrat;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+
   margin: 0 0 10px 0;
 }
 
 .optionDescription {
-  font-size: 1em;
-  color: #e6e6e6;
+  color: #fff;
+  font-family: Montserrat;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
 }
 
 .myButton {
-  display: none;
-  background-color: #ffc107;
-  color: #000;
+  border-radius: 76px;
+  background: #f8c64d;
+  color: #222;
+  font-family: Poppins;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  text-transform: uppercase;
   border: none;
-  border-radius: 20px;
-  padding: 10px 20px;
+
+  padding: 10px 24px;
   cursor: pointer;
   font-weight: bold;
   text-transform: uppercase;
   transition: display 0.3s ease;
+  margin-top: 30px;
 }
 
 .displayArea {
@@ -328,13 +386,22 @@
 }
 
 .round {
+  background: url("/background.svg");
+  padding-inline: 150px;
+  padding-block: 200px;
+}
+.roundContent {
+  max-width: 1440px;
   display: flex;
   justify-content: center;
   align-items: center;
-  background: url("/background.svg");
+  margin: 0 auto;
 }
 
-.leftside {
+.leftSide {
+  display: flex;
+  flex-direction: column;
+  gap: 55px;
   h5 {
     color: #057780;
     font-family: Montserrat;
