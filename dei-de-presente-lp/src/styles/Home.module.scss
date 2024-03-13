@@ -2,7 +2,9 @@
   background: linear-gradient(359deg, #fff 6.23%, #07a7b3 151.65%);
 }
 
-.texts {
+.title {
+  max-width: 1440px;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   padding-top: 77px;
@@ -75,7 +77,7 @@
   white-space: nowrap;
   position: relative;
   z-index: 10;
-  padding-block: 30px;
+  padding-block: 40px;
   position: relative;
   right: 10px;
   width: 110%;
@@ -89,6 +91,15 @@
   gap: 30px;
   width: 100%;
   animation: scrolling-left 20s linear infinite;
+  span {
+    color: #fff;
+    font-family: Montserrat;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 27px; /* 112.5% */
+    letter-spacing: 0.167px;
+  }
 }
 
 @keyframes scrolling-left {
@@ -112,18 +123,18 @@
   display: flex;
   align-items: center;
   gap: 30px;
-  background: #fff;
+  background: #e1fcfe;
   -webkit-backdrop-filter: blur(9.798324585px);
   backdrop-filter: blur(9.798324585px);
   width: 100%;
-  padding-block: 18px;
+  padding-block: 40px;
   transform: rotate(-5deg);
   overflow: hidden;
   white-space: nowrap;
   position: relative;
   margin-bottom: 15px;
   filter: blur(1.2247905731px);
-  padding-block: 30px;
+  padding-block: 40px;
 }
 
 .bottomBarContent {
@@ -135,6 +146,278 @@
   width: 100%;
   animation: scrolling-right 20s linear infinite;
   span {
+    color: var(--brand-black, #1c1c1c);
+    font-family: Syne;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 27px; /* 112.5% */
+    letter-spacing: 0.167px;
+  }
+}
+
+.images {
+  background-color: #fff;
+
+  h1 {
     color: #000;
+    font-family: Montserrat;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 150%; /* 72px */
+    letter-spacing: -0.96px;
+  }
+
+  h5 {
+    color: var(--Black, #1a202c);
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%; /* 27px */
+  }
+}
+
+.texts {
+  font-family: "montserrat", sans-serif;
+  padding-top: 8rem;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.iconHowWorks {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4rem;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.icons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  max-width: 1440px;
+  margin: 0 auto;
+
+  h2 {
+    color: var(--Black, #1a202c);
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 150%;
+    letter-spacing: -0.48px;
+  }
+
+  p {
+    color: var(--Black, #1a202c);
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 175%;
+    letter-spacing: -0.28px;
+  }
+}
+
+.virtualStoreContainer {
+  background: #f9fafb;
+}
+
+.virtualStore {
+  display: flex;
+  flex-direction: column;
+  max-width: 1440px;
+  padding-left: 90px;
+  margin: 0 auto;
+}
+
+.subTitle {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-bottom: 60px;
+  padding-top: 84px;
+  max-width: 1440px;
+
+  h5 {
+    color: #07a7b3;
+    font-family: Montserrat;
+    font-size: 14.375px;
+    font-style: normal;
+    font-weight: 700;
+
+    text-transform: uppercase;
+  }
+  p {
+    color: #000;
+    font-family: Montserrat;
+    font-size: 45.188px;
+    font-style: normal;
+    font-weight: 700;
+  }
+}
+
+.sitePreview {
+  padding-bottom: 150px;
+}
+
+.themesContainer {
+  background: #057780;
+}
+
+.themesContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 20px;
+  color: #fff;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.optionsList {
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+}
+.optionContainer {
+  align-items: center;
+}
+
+.option {
+  display: flex;
+  background: none;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+
+  .optionNumber {
+    margin-right: 20px; // Adjust spacing as needed
+    color: #fff;
+    font-family: Montserrat;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+
+  .myButton {
+    display: none;
+  }
+}
+
+.option.selected {
+  border-left: 5px solid #fff;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.15) 65.74%,
+    rgba(255, 255, 255, 0) 101.31%
+  );
+
+  .myButton {
+    display: block;
+  }
+}
+
+.optionContent {
+  margin-bottom: 10px;
+}
+
+.optionTitle {
+  color: #fff;
+  font-family: Montserrat;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+
+  margin: 0 0 10px 0;
+}
+
+.optionDescription {
+  color: #fff;
+  font-family: Montserrat;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.myButton {
+  border-radius: 76px;
+  background: #f8c64d;
+  color: #222;
+  font-family: Poppins;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  text-transform: uppercase;
+  border: none;
+
+  padding: 10px 24px;
+  cursor: pointer;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: display 0.3s ease;
+  margin-top: 30px;
+}
+
+.displayArea {
+  width: 50%;
+  img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+  }
+}
+
+.round {
+  background: url("/background.svg");
+  padding-inline: 150px;
+  padding-block: 200px;
+}
+.roundContent {
+  max-width: 1440px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.leftSide {
+  display: flex;
+  flex-direction: column;
+  gap: 55px;
+  h5 {
+    color: #057780;
+    font-family: Montserrat;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 43px; /* 86% */
+    letter-spacing: 0.167px;
+  }
+  p {
+    color: #057780;
+    font-family: Montserrat;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 43px; /* 179.167% */
+    letter-spacing: 0.167px;
   }
 }

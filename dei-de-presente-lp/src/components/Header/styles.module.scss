@@ -6,11 +6,16 @@
   padding-block: 20px;
   padding-inline: 40px;
   align-items: center;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.logo {
+  cursor: pointer;
 }
 
 .rightside {
   display: flex;
-
   align-items: center;
   justify-content: flex-end;
   width: 100%;
@@ -25,6 +30,7 @@
     font-size: 16px;
     font-style: normal;
     font-weight: 500;
+    cursor: pointer;
   }
 }
 
