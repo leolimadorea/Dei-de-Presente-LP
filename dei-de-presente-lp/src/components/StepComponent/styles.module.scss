@@ -1,0 +1,182 @@
+.themesContainer {
+  background: #057780;
+  padding-block: 120px;
+}
+
+.themeTitle {
+  display: flex;
+  flex-direction: column;
+  padding-top: 52px;
+  padding-bottom: 10px;
+  padding-left: 30px;
+  max-width: 1440px;
+  margin: 0 auto;
+
+  h5 {
+    color: #fff;
+    font-family: Montserrat;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: 8.16px;
+    text-transform: uppercase;
+    padding-bottom: 24px;
+  }
+  span {
+    color: #fff;
+    font-family: Montserrat;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 39px;
+    text-transform: uppercase;
+    display: flex;
+  }
+  p {
+    color: #f8c64d;
+    font-family: Montserrat;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 39px;
+    text-transform: uppercase;
+    padding-left: 5px;
+  }
+}
+
+.themesContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 20px;
+  color: #fff;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.optionsList {
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+}
+.optionContainer {
+  align-items: center;
+}
+
+.option {
+  display: flex;
+  background: none;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+
+  .optionNumber {
+    margin-right: 20px; // Adjust spacing as needed
+    color: #fff;
+    font-family: Montserrat;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+
+  .myButton {
+    display: none;
+  }
+
+  &:hover {
+    transform: scale(1.05);
+  }
+
+  &.selected {
+    transform: translateX(-10px);
+    border-left: 5px solid #fff;
+    background: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.15) 65.74%,
+      rgba(255, 255, 255, 0) 101.31%
+    );
+
+    .myButton {
+      display: block;
+    }
+  }
+}
+
+.option.selected {
+  transform: translateX(0);
+  border-left: 5px solid #fff;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.15) 65.74%,
+    rgba(255, 255, 255, 0) 101.31%
+  );
+
+  .myButton {
+    display: block;
+  }
+}
+
+.optionContent {
+  margin-bottom: 10px;
+}
+
+.optionTitle {
+  color: #fff;
+  font-family: Montserrat;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+
+  margin: 0 0 10px 0;
+}
+
+.optionDescription {
+  color: #fff;
+  font-family: Montserrat;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.myButton {
+  border-radius: 76px;
+  background: #f8c64d;
+  color: #222;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  text-transform: uppercase;
+  border: none;
+
+  padding: 10px 24px;
+  cursor: pointer;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: display 0.3s ease;
+  margin-top: 30px;
+}
+
+.displayArea {
+  width: 50%;
+  overflow: hidden;
+}
+.displayArea img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+  transition: transform 400ms cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.imgNotSelected {
+  transform: translateX(100%);
+}
+
+.imgSelected {
+  transform: translateX(0);
+}

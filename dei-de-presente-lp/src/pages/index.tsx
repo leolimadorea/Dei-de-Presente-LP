@@ -1,7 +1,7 @@
 import ImageCarousel from "@/components/Carousel";
-import AnimatedBoxes from "@/components/Circle";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
+import StepComponent from "@/components/StepComponent";
 import styles from "@/styles/Home.module.scss";
 import dynamic from "next/dynamic";
 import React, { useEffect, useState } from "react";
@@ -161,52 +161,22 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className={styles.themesContainer}>
-          <div className={styles.themeTitle}>
-            <h5>TEMAS</h5>
-            <span>
-              Temas de <p>alto padrão,</p>
-            </span>
-            <span>
-              seu evento <p>inesquecível</p>
-            </span>
-          </div>
-          <div className={styles.themesContent}>
-            <div className={styles.optionsList}>
-              {themes.map((theme, index) => (
-                <div
-                  key={theme.id}
-                  className={`${styles.option} ${
-                    selectedTheme.id === theme.id ? styles.selected : ""
-                  }`}
-                  onClick={() => setSelectedTheme(theme)}
-                >
-                  <span className={styles.optionNumber}>
-                    {(index + 1).toString().padStart(2, "0")}
-                  </span>
-                  <div className={styles.optionContainer}>
-                    <div className={styles.optionContent}>
-                      <h3 className={styles.optionTitle}>{theme.name}</h3>
-                      <p className={styles.optionDescription}>
-                        {theme.description}
-                      </p>
-                    </div>
-                    {selectedTheme?.id === theme.id && (
-                      <button className={styles.myButton}>Quero o meu</button>
-                    )}
-                  </div>
-                </div>
-              ))}
+        <StepComponent />
+        <div className={styles.round}>
+          <div className={styles.roundContent}>
+            <div className={styles.leftSide}>
+              <h5>A sua festa pode fazer diferença na vida de alguém!</h5>
+              <p>
+                com o <strong>dei de presente</strong> você pode destinar 1% do
+                valor arrecadado ao <strong> Hospital Erasto Gartner</strong> em
+                Curitiba!
+              </p>
             </div>
-            {selectedTheme && (
-              <div className={styles.displayArea}>
-                <img src={selectedTheme.image} alt={selectedTheme.name} />
-              </div>
-            )}
+            <div className={styles.rightside}>
+              <img src="/dance.svg" />
+            </div>
           </div>
         </div>
-        <AnimatedBoxes />
-
         <Footer />
         <NoSSRLottie />
       </main>
