@@ -10,7 +10,7 @@
   flex-direction: column;
   padding-top: 77px;
   padding-bottom: 60px;
-  gap: 34px;
+  gap: 17px;
   justify-content: center;
   h1 {
     color: #fff;
@@ -30,7 +30,7 @@
     font-size: 24px;
     font-style: normal;
     font-weight: 500;
-    line-height: 43px; /* 179.167% */
+    line-height: 43px;
     letter-spacing: 0.167px;
   }
 }
@@ -38,7 +38,7 @@
 .button {
   display: flex;
   justify-content: center;
-  margin-top: 40px;
+  margin-top: 65px;
 
   button {
     color: #000;
@@ -50,10 +50,11 @@
     padding-block: 16px;
     padding-inline: 25px;
     border-radius: 76px;
-    border: 2px solid #000;
+    border: 1px solid #000;
     gap: 10px;
     background: none;
     align-items: center;
+    cursor: pointer;
     img {
       width: 24px;
       height: 24px;
@@ -286,6 +287,8 @@
   padding-top: 52px;
   padding-bottom: 10px;
   padding-left: 30px;
+  max-width: 1440px;
+  margin: 0 auto;
 
   h5 {
     color: #fff;
@@ -402,7 +405,7 @@
   border-radius: 76px;
   background: #f8c64d;
   color: #222;
-  font-family: Poppins;
+  font-family: Montserrat;
   font-size: 14px;
   font-style: normal;
   font-weight: 600;

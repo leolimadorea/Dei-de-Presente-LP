@@ -17,20 +17,20 @@ const themes: Theme[] = [
     id: 1,
     name: "BALADA",
     description: "Tema de festa, um dos mais modernos e extravagantes.",
-    image: "/nightclub.svg",
+    image: "/balada.svg",
   },
   {
     id: 2,
     name: "CASAMENTO",
     description: "Tema minimalista, com muito sentimento e elegância.",
-    image: "/wedding.svg",
+    image: "/casamento.svg",
   },
   {
     id: 3,
     name: "ANIVERSÁRIO",
     description:
       "Seguindo a temática de aniversário, ideal para qualquer celebração de aniversário",
-    image: "/birthday.svg",
+    image: "/aniver.svg",
   },
 ];
 
@@ -48,7 +48,7 @@ export default function Home() {
   }, []);
 
   const NoSSRLottie = dynamic(() => import("../components/Whatsapp"), {
-    ssr: false, // This will only render the component on the client-side
+    ssr: false,
   });
 
   return (
@@ -154,8 +154,8 @@ export default function Home() {
               <p>Sua loja do seu jeito</p>
             </div>
             <div className={styles.sitePreview}>
-              <video width="1200" controls autoPlay muted loop>
-                <source src="/Video/video.mp4" type="video/mp4" />
+              <video width="1200" autoPlay muted loop>
+                <source src="/Video/video2.mp4" type="video/mp4" />
               </video>
             </div>
           </div>

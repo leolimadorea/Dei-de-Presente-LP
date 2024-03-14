@@ -10,7 +10,7 @@ const ImageCarousel = () => {
     <Swiper
       modules={[Navigation, EffectCoverflow, Autoplay]}
       effect={"coverflow"}
-      slidesPerView={3}
+      slidesPerView={2}
       autoplay={{ delay: 3000, disableOnInteraction: false }}
       pagination={{ clickable: true }}
       coverflowEffect={{
@@ -24,31 +24,31 @@ const ImageCarousel = () => {
       centeredSlides={true}
     >
       <SwiperSlide className={styles.swiperSlide}>
-        <img src="/wedding.svg" alt="Wedding" />
+        <img src="/casamento.svg" alt="casamento" />
       </SwiperSlide>
       <SwiperSlide className={styles.swiperSlide}>
-        <img src="/nightclub.svg" alt="Nightclub" />
+        <img src="/balada.svg" alt="balada" />
       </SwiperSlide>
       <SwiperSlide className={styles.swiperSlide}>
-        <img src="/birthday.svg" alt="Birthday" />
+        <img src="/aniver.svg" alt="aniver" />
       </SwiperSlide>
       <SwiperSlide className={styles.swiperSlide}>
-        <img src="/wedding.svg" alt="Wedding again" />
+        <img src="/casamento.svg" alt="casamento again" />
       </SwiperSlide>
       <SwiperSlide className={styles.swiperSlide}>
-        <img src="/nightclub.svg" alt="Nightclub again" />
+        <img src="/balada.svg" alt="balada again" />
       </SwiperSlide>
       <SwiperSlide className={styles.swiperSlide}>
-        <img src="/birthday.svg" alt="Birthday again" />
+        <img src="/aniver.svg" alt="aniver again" />
       </SwiperSlide>
       <SwiperSlide className={styles.swiperSlide}>
-        <img src="/wedding.svg" alt="Wedding again" />
+        <img src="/casamento.svg" alt="casamento again" />
       </SwiperSlide>
       <SwiperSlide className={styles.swiperSlide}>
-        <img src="/nightclub.svg" alt="Nightclub again" />
+        <img src="/balada.svg" alt="balada again" />
       </SwiperSlide>
       <SwiperSlide className={styles.swiperSlide}>
-        <img src="/birthday.svg" alt="Birthday again" />
+        <img src="/aniver.svg" alt="aniver again" />
       </SwiperSlide>
     </Swiper>
   );
