@@ -1,0 +1,12 @@
+.floatingIcon {
+  position: fixed; /* This makes it stay in the same place even when scrolling */
+  bottom: 20px; /* Distance from the bottom of the viewport */
+  right: 20px; /* Distance from the right of the viewport */
+  z-index: 1000; /* Ensure it stays above other content */
+}
+
+/* Optional: Add a simple transition for hover effect */
+.floatingIcon:hover {
+  transform: scale(1.1); /* Slightly increase size when hovered */
+  transition: transform 0.2s; /* Smooth transition */
+}

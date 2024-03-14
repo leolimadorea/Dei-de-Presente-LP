@@ -1,8 +1,9 @@
 import ImageCarousel from "@/components/Carousel";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
+import Whatsapp from "@/components/Whatsapp";
 import styles from "@/styles/Home.module.scss";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 interface Theme {
   id: number;
@@ -35,10 +36,20 @@ const themes: Theme[] = [
 
 export default function Home() {
   const [selectedTheme, setSelectedTheme] = useState<Theme>(themes[0]);
+  const [isFixed, setIsFixed] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsFixed(window.pageYOffset > 50);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
     <>
-      <Header />
+      <Header fixed={isFixed} />
       <main className={styles.container}>
         <div className={styles.title}>
           <h1>Dar e receber presentes </h1>
@@ -139,7 +150,9 @@ export default function Home() {
               <p>Sua loja do seu jeito</p>
             </div>
             <div className={styles.sitePreview}>
-              <img src="/sitePreview.svg" />
+              <video width="1200" controls autoPlay muted loop>
+                <source src="/Video/video.mp4" type="video/mp4" />
+              </video>
             </div>
           </div>
         </div>
@@ -203,6 +216,7 @@ export default function Home() {
           </div>
         </div>
         <Footer />
+        <Whatsapp />
       </main>
     </>
   );

@@ -1,5 +1,6 @@
 .container {
-  background: linear-gradient(359deg, #fff 6.23%, #07a7b3 151.65%);
+  padding-top: 100px;
+  background: linear-gradient(to bottom, #07a7b3 0%, #fff 25%);
 }
 
 .title {
@@ -49,9 +50,10 @@
     padding-block: 16px;
     padding-inline: 25px;
     border-radius: 76px;
-    background-color: #fff;
     border: 2px solid #000;
     gap: 10px;
+    background: none;
+    align-items: center;
     img {
       width: 24px;
       height: 24px;
@@ -147,7 +149,7 @@
   animation: scrolling-right 20s linear infinite;
   span {
     color: var(--brand-black, #1c1c1c);
-    font-family: Syne;
+    font-family: Montserrat;
     font-size: 24px;
     font-style: normal;
     font-weight: 600;

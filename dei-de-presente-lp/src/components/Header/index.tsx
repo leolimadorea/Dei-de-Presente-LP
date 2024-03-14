@@ -1,9 +1,13 @@
 import styles from "./styles.module.scss";
 
-export default function Header() {
+interface HeaderProps {
+  fixed: boolean;
+}
+
+const Header = ({ fixed }: HeaderProps) => {
   return (
     <>
-      <main className={styles.container}>
+      <main className={`${styles.header} ${fixed ? styles.fixed : ""}`}>
         <div className={styles.content}>
           <div className={styles.logo}>
             <img src="/logo.svg" />
@@ -24,4 +28,6 @@ export default function Header() {
       </main>
     </>
   );
-}
+};
+
+export default Header;

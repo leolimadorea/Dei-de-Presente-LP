@@ -1,17 +1,17 @@
-import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
-import { EffectCoverflow, Navigation } from 'swiper/modules';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import styles from './styles.module.scss';
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import { Autoplay, EffectCoverflow, Navigation } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
+import styles from "./styles.module.scss";
 
-const ImageCarousel: React.FC = () => {
+const ImageCarousel = () => {
   return (
     <Swiper
-      modules={[Navigation, EffectCoverflow]}
-      effect={'coverflow'}
+      modules={[Navigation, EffectCoverflow, Autoplay]}
+      effect={"coverflow"}
       slidesPerView={3}
-      navigation
+      autoplay={{ delay: 3000, disableOnInteraction: false }}
       pagination={{ clickable: true }}
       coverflowEffect={{
         rotate: 0,
