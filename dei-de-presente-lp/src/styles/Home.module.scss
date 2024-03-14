@@ -184,7 +184,7 @@
 }
 
 .texts {
-  font-family: "montserrat", sans-serif;
+  font-family: 'montserrat', sans-serif;
   padding-top: 8rem;
   color: black;
   display: flex;
@@ -364,9 +364,28 @@
   .myButton {
     display: none;
   }
+
+  &:hover {
+    transform: scale(1.05);
+  }
+
+  &.selected {
+    transform: translateX(-10px);
+    border-left: 5px solid #fff;
+    background: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.15) 65.74%,
+      rgba(255, 255, 255, 0) 101.31%
+    );
+
+    .myButton {
+      display: block;
+    }
+  }
 }
 
 .option.selected {
+  transform: translateX(-10px);
   border-left: 5px solid #fff;
   background: linear-gradient(
     90deg,
@@ -422,17 +441,22 @@
 
 .displayArea {
   width: 50%;
+  overflow: hidden;
   img {
     width: 100%;
     height: auto;
     display: block;
     border-radius: 8px;
-    transition: var(--transition-speed) all cubic-bezier(0.075, 0.82, 0.165, 1);
+    transition: transform 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+    transform: translateX(0%);
+  }
+  .selected & img {
+    transform: translateX(0);
   }
 }
 
 .round {
-  background: url("/background.svg");
+  background: url('/background.svg');
   padding-inline: 150px;
   padding-block: 200px;
 }

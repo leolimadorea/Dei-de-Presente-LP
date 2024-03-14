@@ -1,9 +1,10 @@
-import ImageCarousel from "@/components/Carousel";
-import Footer from "@/components/Footer";
-import Header from "@/components/Header";
-import styles from "@/styles/Home.module.scss";
-import dynamic from "next/dynamic";
-import React, { useEffect, useState } from "react";
+import ImageCarousel from '@/components/Carousel';
+import Footer from '@/components/Footer';
+import Header from '@/components/Header';
+import StepComponent from '@/components/StepComponent';
+import styles from '@/styles/Home.module.scss';
+import dynamic from 'next/dynamic';
+import React, { useEffect, useState } from 'react';
 
 interface Theme {
   id: number;
@@ -15,22 +16,22 @@ interface Theme {
 const themes: Theme[] = [
   {
     id: 1,
-    name: "BALADA",
-    description: "Tema de festa, um dos mais modernos e extravagantes.",
-    image: "/balada.svg",
+    name: 'BALADA',
+    description: 'Tema de festa, um dos mais modernos e extravagantes.',
+    image: '/balada.svg',
   },
   {
     id: 2,
-    name: "CASAMENTO",
-    description: "Tema minimalista, com muito sentimento e elegância.",
-    image: "/casamento.svg",
+    name: 'CASAMENTO',
+    description: 'Tema minimalista, com muito sentimento e elegância.',
+    image: '/casamento.svg',
   },
   {
     id: 3,
-    name: "ANIVERSÁRIO",
+    name: 'ANIVERSÁRIO',
     description:
-      "Seguindo a temática de aniversário, ideal para qualquer celebração de aniversário",
-    image: "/aniver.svg",
+      'Seguindo a temática de aniversário, ideal para qualquer celebração de aniversário',
+    image: '/aniver.svg',
   },
 ];
 
@@ -43,11 +44,11 @@ export default function Home() {
       setIsFixed(window.pageYOffset > 50);
     };
 
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const NoSSRLottie = dynamic(() => import("../components/Whatsapp"), {
+  const NoSSRLottie = dynamic(() => import('../components/Whatsapp'), {
     ssr: false,
   });
 
@@ -160,50 +161,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className={styles.themesContainer}>
-          <div className={styles.themeTitle}>
-            <h5>TEMAS</h5>
-            <span>
-              Temas de <p>alto padrão,</p>
-            </span>
-            <span>
-              seu evento <p>inesquecível</p>
-            </span>
-          </div>
-          <div className={styles.themesContent}>
-            <div className={styles.optionsList}>
-              {themes.map((theme, index) => (
-                <div
-                  key={theme.id}
-                  className={`${styles.option} ${
-                    selectedTheme.id === theme.id ? styles.selected : ""
-                  }`}
-                  onClick={() => setSelectedTheme(theme)}
-                >
-                  <span className={styles.optionNumber}>
-                    {(index + 1).toString().padStart(2, "0")}
-                  </span>
-                  <div className={styles.optionContainer}>
-                    <div className={styles.optionContent}>
-                      <h3 className={styles.optionTitle}>{theme.name}</h3>
-                      <p className={styles.optionDescription}>
-                        {theme.description}
-                      </p>
-                    </div>
-                    {selectedTheme?.id === theme.id && (
-                      <button className={styles.myButton}>Quero o meu</button>
-                    )}
-                  </div>
-                </div>
-              ))}
-            </div>
-            {selectedTheme && (
-              <div className={styles.displayArea}>
-                <img src={selectedTheme.image} alt={selectedTheme.name} />
-              </div>
-            )}
-          </div>
-        </div>
+        <StepComponent />
         <div className={styles.round}>
           <div className={styles.roundContent}>
             <div className={styles.leftSide}>
