@@ -1,15 +1,17 @@
 import React from "react";
 import styles from "./styles.module.scss";
 
-interface AnimatedBoxesProps {
+interface AnimatedCirclesProps {
+  className?: string;
   children?: React.ReactNode;
 }
 
-const AnimatedBoxes: React.FC<AnimatedBoxesProps> = ({ children }) => {
+const AnimatedCircles = ({ className, children }: AnimatedCirclesProps) => {
   return (
-    <div className={styles.container}>
+    <div className={`${styles.container} ${className}`}>
       <div className="row">
         <div className="colmd12">
+          {children}
           <div className={styles.oneanimate}></div>
           <div className={styles.twoanimate}></div>
           <div className={styles.threeanimate}></div>
@@ -26,4 +28,4 @@ const AnimatedBoxes: React.FC<AnimatedBoxesProps> = ({ children }) => {
   );
 };
 
-export default AnimatedBoxes;
+export default AnimatedCircles;

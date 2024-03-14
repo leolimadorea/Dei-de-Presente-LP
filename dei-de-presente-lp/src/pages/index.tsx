@@ -1,3 +1,4 @@
+import AnimatedCircles from "@/components/AnimatedCircles";
 import ImageCarousel from "@/components/Carousel";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
@@ -162,7 +163,8 @@ export default function Home() {
           </div>
         </div>
         <StepComponent />
-        <div className={styles.round}>
+
+        <AnimatedCircles className={styles.round}>
           <div className={styles.roundContent}>
             <div className={styles.leftSide}>
               <h5>A sua festa pode fazer diferença na vida de alguém!</h5>
@@ -176,7 +178,7 @@ export default function Home() {
               <img src="/dance.svg" />
             </div>
           </div>
-        </div>
+        </AnimatedCircles>
         <Footer />
         <NoSSRLottie />
       </main>

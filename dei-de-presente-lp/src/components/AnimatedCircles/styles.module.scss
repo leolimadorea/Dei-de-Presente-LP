@@ -1,5 +1,5 @@
 $animation-duration: 5s;
-$background-color: #057780;
+$background-color: #07a7b3;
 $border-radius: 50%;
 $position: absolute;
 
@@ -127,7 +127,7 @@ $position: absolute;
 }
 
 .oneanimate {
-  --duration: 5s;
+  --duration: 8s;
   --size: 100px;
   --offset: calc(var(--size) * 1.2);
   width: var(--size);
@@ -146,7 +146,7 @@ $position: absolute;
   --offset: calc(var(--size) * 1.2);
   width: var(--size);
   height: var(--size);
-  opacity: 0.7;
+  opacity: 0.5;
   border-radius: 50%;
   position: absolute;
   bottom: 10px;
@@ -155,7 +155,7 @@ $position: absolute;
 }
 
 .threeanimate {
-  --duration: 5s;
+  --duration: 7.5s;
   --size: 120px;
   --offset: calc(var(--size) * 1.2);
   width: var(--size);
@@ -167,7 +167,7 @@ $position: absolute;
 }
 
 .fouranimate {
-  --duration: 5s;
+  --duration: 10s;
   --size: 80px;
   --offset: calc(var(--size) * 1.2);
   width: var(--size);
@@ -179,36 +179,36 @@ $position: absolute;
 }
 
 .fiveanimate {
-  --duration: 2.5s;
+  --duration: 8.5s;
   --size: 50px;
   --offset: calc(var(--size) * 1.2);
   width: var(--size);
   height: var(--size);
-  opacity: 0.9;
+  opacity: 0.5;
   bottom: 200px;
   right: 0;
   animation: MoveUpDown var(--duration) linear infinite;
 }
 
 .sixanimate {
-  --duration: 7s;
+  --duration: 7.5s;
   --size: 175px;
   --offset: calc(var(--size) * 1.2);
   width: var(--size);
   height: var(--size);
-  opacity: 0.6;
+  opacity: 0.45;
   bottom: 250px;
   right: 200px;
   animation: MoveUpDown var(--duration) linear infinite;
 }
 
 .sevenanimate {
-  --duration: 4s;
+  --duration: 7.5s;
   --size: 250px;
   --offset: calc(var(--size) * 1.2);
   width: var(--size);
   height: var(--size);
-  opacity: 0.3;
+  opacity: 0.25;
   bottom: 0;
   left: 500px;
   right: 0;
@@ -216,35 +216,35 @@ $position: absolute;
 }
 
 .eightanimate {
-  --duration: 8s;
+  --duration: 8.5s;
   --size: 75px;
   --offset: calc(var(--size) * 1.2);
   width: var(--size);
   height: var(--size);
-  opacity: 0.4;
+  opacity: 0.3;
   bottom: 0;
   left: 350px;
   animation: MoveUpDown var(--duration) linear infinite;
 }
 .nineanimate {
-  --duration: 3.5s;
+  --duration: 7.5s;
   --size: 45px;
   --offset: calc(var(--size) * 1.2);
   width: var(--size);
   height: var(--size);
-  opacity: 0.7;
+  opacity: 0.6;
   bottom: 0;
   left: 450px;
   animation: MoveUpDown var(--duration) linear infinite;
 }
 
 .tenanimate {
-  --duration: 6s;
+  --duration: 7s;
   --size: 150px;
   --offset: calc(var(--size) * 1.2);
   width: var(--size);
   height: var(--size);
-  opacity: 0.6;
+  opacity: 0.45;
   bottom: 0;
   right: 400px;
   animation: MoveUpDown var(--duration) linear infinite;
@@ -257,7 +257,7 @@ $position: absolute;
 }
 
 .container {
-  --height: 500px;
+  --height: 100%;
   background-color: transparent;
   position: relative;
   height: var(--height);
