@@ -6,7 +6,7 @@ import styles from "./styles.module.scss";
 const WhatsApp = () => {
   return (
     <Link
-      href="https://wa.link/b9csmr"
+      href="https://wa.link/480u9o"
       target="_blank"
       rel="noopener noreferrer"
       className={styles.floatingIcon}

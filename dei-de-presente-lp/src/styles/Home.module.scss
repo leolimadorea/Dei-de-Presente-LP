@@ -427,6 +427,7 @@
     height: auto;
     display: block;
     border-radius: 8px;
+    transition: var(--transition-speed) all cubic-bezier(0.075, 0.82, 0.165, 1);
   }
 }
 
