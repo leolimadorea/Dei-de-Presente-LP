@@ -1,14 +1,99 @@
 .header {
   width: 100%;
-  position: absolute; // Initially position absolutely for the transparent effect
+  position: absolute;
   top: 0;
-  background-color: rgba(255, 255, 255, 0.5); // Semi-transparent background
-  transition: background-color 0.3s ease; // Smooth transition for background color
+  background-color: rgba(255, 255, 255, 0.5);
+  transition: background-color 0.3s ease;
+  .themes {
+    display: flex;
+    gap: 43px;
+    h5 {
+      color: #fff;
+      font-family: Montserrat;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 500;
+      cursor: pointer;
+    }
+    .hr {
+      opacity: 0.3;
+      background: #fff;
+      margin-inline: 54px;
+      width: 2px;
+      height: 60px;
+    }
+  }
+  .buttons {
+    .enter {
+      background: none;
+      color: #fff;
+      border: none;
+      font-family: Montserrat;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 500;
+      cursor: pointer;
+    }
 
+    .create {
+      border-radius: 76px;
+
+      border: 1px solid #fff;
+      color: #fff;
+      background: none;
+      font-family: Montserrat;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 600;
+      padding-block: 16px;
+      padding-inline: 60px;
+      cursor: pointer;
+    }
+  }
   &.fixed {
-    position: fixed; // Make the header fixed on scroll
+    position: fixed;
     background-color: rgba(255, 255, 255, 1);
-    z-index: 100; // Set a higher z-index to make sure the header is on top of other elements
+    z-index: 100;
+    h5 {
+      color: #000;
+      font-family: Montserrat;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 500;
+      cursor: pointer;
+    }
+    .hr {
+      opacity: 0.3;
+      background: #000;
+      margin-inline: 54px;
+      width: 2px;
+      height: 60px;
+    }
+    .enter {
+      background: none;
+      color: #000;
+      border: none;
+      font-family: Montserrat;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 500;
+      cursor: pointer;
+    }
+
+    .create {
+      border-radius: 76px;
+
+      border: 1px solid #000;
+      color: #000;
+      background: none;
+      font-family: Montserrat;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 600;
+      padding-block: 16px;
+      padding-inline: 60px;
+      cursor: pointer;
+    }
   }
 }
 
@@ -71,7 +156,7 @@
   .create {
     border-radius: 76px;
 
-    border: 2px solid #000;
+    border: 1px solid #000;
     color: #000;
     background: none;
     font-family: Montserrat;

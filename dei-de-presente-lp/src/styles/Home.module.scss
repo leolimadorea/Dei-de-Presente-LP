@@ -13,7 +13,7 @@
   flex-direction: column;
   padding-top: 77px;
   padding-bottom: 60px;
-  gap: 34px;
+  gap: 17px;
   justify-content: center;
   h1 {
     color: #fff;
@@ -33,7 +33,7 @@
     font-size: 24px;
     font-style: normal;
     font-weight: 500;
-    line-height: 43px; /* 179.167% */
+    line-height: 43px;
     letter-spacing: 0.167px;
   }
 }
@@ -41,7 +41,7 @@
 .button {
   display: flex;
   justify-content: center;
-  margin-top: 40px;
+  margin-top: 65px;
 
   button {
     color: #000;
@@ -53,10 +53,11 @@
     padding-block: 16px;
     padding-inline: 25px;
     border-radius: 76px;
-    border: 2px solid #000;
+    border: 1px solid #000;
     gap: 10px;
     background: none;
     align-items: center;
+    cursor: pointer;
     img {
       width: 24px;
       height: 24px;
@@ -186,7 +187,7 @@
 }
 
 .texts {
-  font-family: "montserrat", sans-serif;
+  font-family: 'montserrat', sans-serif;
   padding-top: 8rem;
   color: black;
   display: flex;
@@ -289,6 +290,8 @@
   padding-top: 52px;
   padding-bottom: 10px;
   padding-left: 30px;
+  max-width: 1440px;
+  margin: 0 auto;
 
   h5 {
     color: #fff;
@@ -364,9 +367,28 @@
   .myButton {
     display: none;
   }
+
+  &:hover {
+    transform: scale(1.05);
+  }
+
+  &.selected {
+    transform: translateX(-10px);
+    border-left: 5px solid #fff;
+    background: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.15) 65.74%,
+      rgba(255, 255, 255, 0) 101.31%
+    );
+
+    .myButton {
+      display: block;
+    }
+  }
 }
 
 .option.selected {
+  transform: translateX(-10px);
   border-left: 5px solid #fff;
   background: linear-gradient(
     90deg,
@@ -405,7 +427,7 @@
   border-radius: 76px;
   background: #f8c64d;
   color: #222;
-  font-family: Poppins;
+  font-family: Montserrat;
   font-size: 14px;
   font-style: normal;
   font-weight: 600;
@@ -422,16 +444,22 @@
 
 .displayArea {
   width: 50%;
+  overflow: hidden;
   img {
     width: 100%;
     height: auto;
     display: block;
     border-radius: 8px;
+    transition: transform 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+    transform: translateX(0%);
+  }
+  .selected & img {
+    transform: translateX(0);
   }
 }
 
 .round {
-  background: url("/background.svg");
+  background: url('/background.svg');
   padding-inline: 150px;
   padding-block: 200px;
 }
