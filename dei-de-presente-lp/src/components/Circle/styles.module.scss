@@ -1,0 +1,265 @@
+$animation-duration: 5s;
+$background-color: #057780;
+$border-radius: 50%;
+$position: absolute;
+
+.col-md-12 {
+  height: 500px;
+  background: #f1f1f1;
+  margin-top: 50px;
+  overflow: hidden;
+}
+
+@keyframes MoveUpDown {
+  0%,
+  100% {
+    bottom: calc(var(--offset) * -1);
+  }
+  50% {
+    bottom: calc(var(--height) + var(--offset) - var(--size));
+  }
+}
+
+@keyframes MoveUpDownThree {
+  0%,
+  100% {
+    bottom: 0;
+  }
+  50% {
+    bottom: 400px;
+  }
+}
+
+@keyframes MoveUpDownFour {
+  0%,
+  100% {
+    bottom: 0;
+  }
+  50% {
+    bottom: 350px;
+  }
+}
+
+@keyframes MoveUpDownFive {
+  0%,
+  100% {
+    bottom: 0;
+  }
+  50% {
+    bottom: 250px;
+  }
+}
+
+@keyframes MoveUpDownSix {
+  0%,
+  100% {
+    bottom: 0;
+  }
+  50% {
+    bottom: 500px;
+  }
+}
+
+@keyframes MoveUpDownSeven {
+  0%,
+  100% {
+    bottom: 0;
+  }
+  50% {
+    bottom: 375px;
+  }
+}
+
+@keyframes MoveUpDownEight {
+  0%,
+  100% {
+    bottom: 0;
+  }
+  50% {
+    bottom: 370px;
+  }
+}
+
+@keyframes MoveUpDownNine {
+  0%,
+  100% {
+    bottom: 0;
+  }
+  50% {
+    bottom: 475px;
+  }
+}
+
+@keyframes MoveUpDownTen {
+  0%,
+  100% {
+    bottom: 0;
+  }
+  50% {
+    bottom: 500px;
+  }
+}
+
+%animate-common-properties {
+  background-color: $background-color;
+  opacity: 0.5;
+  border-radius: $border-radius;
+  position: $position;
+}
+
+.oneanimate,
+.twoanimate,
+.threeanimate,
+.fouranimate,
+.fiveanimate,
+.sixanimate,
+.sevenanimate,
+.eightanimate,
+.nineanimate,
+.tenanimate {
+  @extend %animate-common-properties;
+
+  &.animate {
+    animation-duration: $animation-duration;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+  }
+}
+
+.oneanimate {
+  --duration: 5s;
+  --size: 100px;
+  --offset: calc(var(--size) * 1.2);
+  width: var(--size);
+  height: var(--size);
+  opacity: 0.5;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 0;
+  left: 50px;
+  animation: MoveUpDown var(--duration) linear infinite;
+}
+
+.twoanimate {
+  --duration: 9s;
+  --size: 150px;
+  --offset: calc(var(--size) * 1.2);
+  width: var(--size);
+  height: var(--size);
+  opacity: 0.7;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 10px;
+  left: 200px;
+  animation: MoveUpDown var(--duration) linear infinite;
+}
+
+.threeanimate {
+  --duration: 5s;
+  --size: 120px;
+  --offset: calc(var(--size) * 1.2);
+  width: var(--size);
+  height: var(--size);
+  opacity: 0.2;
+  bottom: 120px;
+  left: 300px;
+  animation: MoveUpDown var(--duration) linear infinite;
+}
+
+.fouranimate {
+  --duration: 5s;
+  --size: 80px;
+  --offset: calc(var(--size) * 1.2);
+  width: var(--size);
+  height: var(--size);
+  opacity: 0.4;
+  bottom: 0;
+  right: 0;
+  animation: MoveUpDown var(--duration) linear infinite;
+}
+
+.fiveanimate {
+  --duration: 2.5s;
+  --size: 50px;
+  --offset: calc(var(--size) * 1.2);
+  width: var(--size);
+  height: var(--size);
+  opacity: 0.9;
+  bottom: 200px;
+  right: 0;
+  animation: MoveUpDown var(--duration) linear infinite;
+}
+
+.sixanimate {
+  --duration: 7s;
+  --size: 175px;
+  --offset: calc(var(--size) * 1.2);
+  width: var(--size);
+  height: var(--size);
+  opacity: 0.6;
+  bottom: 250px;
+  right: 200px;
+  animation: MoveUpDown var(--duration) linear infinite;
+}
+
+.sevenanimate {
+  --duration: 4s;
+  --size: 250px;
+  --offset: calc(var(--size) * 1.2);
+  width: var(--size);
+  height: var(--size);
+  opacity: 0.3;
+  bottom: 0;
+  left: 500px;
+  right: 0;
+  animation: MoveUpDown var(--duration) linear infinite;
+}
+
+.eightanimate {
+  --duration: 8s;
+  --size: 75px;
+  --offset: calc(var(--size) * 1.2);
+  width: var(--size);
+  height: var(--size);
+  opacity: 0.4;
+  bottom: 0;
+  left: 350px;
+  animation: MoveUpDown var(--duration) linear infinite;
+}
+.nineanimate {
+  --duration: 3.5s;
+  --size: 45px;
+  --offset: calc(var(--size) * 1.2);
+  width: var(--size);
+  height: var(--size);
+  opacity: 0.7;
+  bottom: 0;
+  left: 450px;
+  animation: MoveUpDown var(--duration) linear infinite;
+}
+
+.tenanimate {
+  --duration: 6s;
+  --size: 150px;
+  --offset: calc(var(--size) * 1.2);
+  width: var(--size);
+  height: var(--size);
+  opacity: 0.6;
+  bottom: 0;
+  right: 400px;
+  animation: MoveUpDown var(--duration) linear infinite;
+}
+
+.contentOverBackground {
+  display: flex;
+  padding-inline: 150px;
+  padding-block: 200px;
+}
+
+.container {
+  --height: 500px;
+  background-color: transparent;
+  position: relative;
+  height: var(--height);
+  overflow: hidden;
+}

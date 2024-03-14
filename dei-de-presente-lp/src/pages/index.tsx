@@ -1,4 +1,5 @@
 import ImageCarousel from "@/components/Carousel";
+import AnimatedBoxes from "@/components/Circle";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import styles from "@/styles/Home.module.scss";
@@ -154,7 +155,7 @@ export default function Home() {
               <p>Sua loja do seu jeito</p>
             </div>
             <div className={styles.sitePreview}>
-              <video width="1200" autoPlay muted loop>
+              <video className={styles.video} autoPlay muted loop>
                 <source src="/Video/video2.mp4" type="video/mp4" />
               </video>
             </div>
@@ -204,21 +205,8 @@ export default function Home() {
             )}
           </div>
         </div>
-        <div className={styles.round}>
-          <div className={styles.roundContent}>
-            <div className={styles.leftSide}>
-              <h5>A sua festa pode fazer diferença na vida de alguém!</h5>
-              <p>
-                com o <strong>dei de presente</strong> você pode destinar 1% do
-                valor arrecadado ao <strong> Hospital Erasto Gartner</strong> em
-                Curitiba!
-              </p>
-            </div>
-            <div className={styles.rightside}>
-              <img src="/dance.svg" />
-            </div>
-          </div>
-        </div>
+        <AnimatedBoxes />
+
         <Footer />
         <NoSSRLottie />
       </main>
