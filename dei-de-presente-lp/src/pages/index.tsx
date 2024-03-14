@@ -1,8 +1,8 @@
 import ImageCarousel from "@/components/Carousel";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
-import Whatsapp from "@/components/Whatsapp";
 import styles from "@/styles/Home.module.scss";
+import dynamic from "next/dynamic";
 import React, { useEffect, useState } from "react";
 
 interface Theme {
@@ -46,6 +46,10 @@ export default function Home() {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  const NoSSRLottie = dynamic(() => import("../components/Whatsapp"), {
+    ssr: false, // This will only render the component on the client-side
+  });
 
   return (
     <>
@@ -216,7 +220,7 @@ export default function Home() {
           </div>
         </div>
         <Footer />
-        <Whatsapp />
+        <NoSSRLottie />
       </main>
     </>
   );
