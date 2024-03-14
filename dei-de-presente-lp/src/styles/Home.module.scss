@@ -1,6 +1,9 @@
 .container {
   padding-top: 100px;
   background: linear-gradient(to bottom, #07a7b3 0%, #fff 25%);
+  @media screen and (max-width: 768px) {
+    padding-top: 0;
+  }
 }
 
 .title {
@@ -461,5 +464,18 @@
     font-weight: 500;
     line-height: 43px; /* 179.167% */
     letter-spacing: 0.167px;
+  }
+}
+
+.menuHamburguer {
+  justify-content: flex-end;
+  display: none;
+  @media screen and (max-width: 768px) {
+    display: flex;
+  }
+}
+.header {
+  @media screen and (max-width: 768px) {
+    display: none;
   }
 }

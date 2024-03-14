@@ -10,7 +10,7 @@ const ImageCarousel = () => {
     <Swiper
       modules={[Navigation, EffectCoverflow, Autoplay]}
       effect={"coverflow"}
-      slidesPerView={3}
+      slidesPerView={2}
       autoplay={{ delay: 3000, disableOnInteraction: false }}
       pagination={{ clickable: true }}
       coverflowEffect={{

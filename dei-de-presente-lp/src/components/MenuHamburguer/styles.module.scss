@@ -1,0 +1,36 @@
+.menuToggle {
+  display: none;
+  right: 0;
+  z-index: 1;
+  cursor: pointer;
+  padding: 1rem;
+  background-color: var(--color-primary);
+  transition: background-color 0.3s;
+  &:hover {
+    background-color: var(--color-primary-dark);
+  }
+  @media (max-width: 768px) {
+    display: block;
+  }
+}
+
+.menuItens {
+  list-style-type: none;
+  font-family: Montserrat;
+}
+
+.logo {
+  width: 100px;
+  height: 100px;
+  justify-content: space-between;
+  margin-right: 234px;
+}
+
+.menuItens {
+  justify-content: space-between;
+  padding: 2px;
+  align-items: center;
+  color: #fff;
+  max-width: 1440px;
+  margin: 0 auto;
+}

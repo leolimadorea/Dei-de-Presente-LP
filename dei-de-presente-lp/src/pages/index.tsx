@@ -4,6 +4,7 @@ import Header from "@/components/Header";
 import styles from "@/styles/Home.module.scss";
 import dynamic from "next/dynamic";
 import React, { useEffect, useState } from "react";
+import MenuHamburguer from "@/components/MenuHamburguer";
 
 interface Theme {
   id: number;
@@ -53,8 +54,13 @@ export default function Home() {
 
   return (
     <>
-      <Header fixed={isFixed} />
       <main className={styles.container}>
+        <div className={styles.menuHamburguer}>
+          <MenuHamburguer />
+        </div>
+        <div className={styles.header}>
+          <Header fixed={isFixed} />
+        </div>
         <div className={styles.title}>
           <h1>Dar e receber presentes </h1>
           <h1>ficou ainda melhor!</h1>
