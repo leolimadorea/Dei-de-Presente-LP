@@ -19,6 +19,7 @@
   @media screen and (max-width: 768px) {
     gap: 20px;
     padding-inline: 25px;
+    padding-top: 20px;
   }
   h1 {
     color: #fff;
@@ -27,8 +28,13 @@
     font-size: 50px;
     font-style: normal;
     font-weight: 700;
-    line-height: 43px; /* 86% */
+    line-height: 80px;
     letter-spacing: 0.167px;
+    @media screen and (max-width: 768px) {
+      text-align: left;
+      font-size: 30px;
+      line-height: unset;
+    }
   }
   h5 {
     color: #fff;
@@ -40,6 +46,10 @@
     font-weight: 500;
     line-height: 43px;
     letter-spacing: 0.167px;
+    @media screen and (max-width: 768px) {
+      text-align: left;
+      font-size: 18px;
+    }
   }
 }
 
@@ -72,6 +82,11 @@
 
 .movingBars {
   padding-block: 100px;
+  @media screen and (max-width: 768px) {
+    padding-block: 0;
+    padding-top: 100px;
+    padding-bottom: 30px;
+  }
 }
 
 .topBar {
@@ -92,6 +107,9 @@
   position: relative;
   right: 10px;
   width: 110%;
+  @media screen and (max-width: 768px) {
+    padding-block: 20px;
+  }
 }
 
 .topBarContent {
@@ -110,6 +128,9 @@
     font-weight: 600;
     line-height: 27px; /* 112.5% */
     letter-spacing: 0.167px;
+    @media screen and (max-width: 768px) {
+      font-size: 12px;
+    }
   }
 }
 
@@ -146,6 +167,10 @@
   margin-bottom: 15px;
   filter: blur(1.2247905731px);
   padding-block: 40px;
+  @media screen and (max-width: 768px) {
+    padding-block: 20px;
+    bottom: 33px;
+  }
 }
 
 .bottomBarContent {
@@ -164,6 +189,9 @@
     font-weight: 600;
     line-height: 27px; /* 112.5% */
     letter-spacing: 0.167px;
+    @media screen and (max-width: 768px) {
+      font-size: 12px;
+    }
   }
 }
 
@@ -210,6 +238,7 @@
   @media screen and (max-width: 768px) {
     align-items: flex-start;
     padding-left: 20px;
+    padding-top: 70px;
   }
 }
 
@@ -236,6 +265,45 @@
   @media screen and (max-width: 768px) {
     align-items: flex-start;
     width: 100%;
+  }
+
+  h2 {
+    color: var(--Black, #1a202c);
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 150%;
+    letter-spacing: -0.48px;
+    @media screen and (max-width: 768px) {
+      text-align: left;
+    }
+  }
+
+  p {
+    color: var(--Black, #1a202c);
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 175%;
+    letter-spacing: -0.28px;
+    @media screen and (max-width: 768px) {
+      text-align: left;
+    }
+  }
+}
+.arrow {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  max-width: 1440px;
+  margin: 0 auto;
+  @media screen and (max-width: 768px) {
+    display: none;
   }
 
   h2 {

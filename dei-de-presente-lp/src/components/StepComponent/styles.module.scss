@@ -17,6 +17,7 @@
   margin: 0 auto;
   @media screen and (max-width: 768px) {
     padding-left: 0;
+    padding-bottom: 100px;
   }
 
   h5 {
@@ -190,6 +191,9 @@
   text-transform: uppercase;
   transition: display 0.3s ease;
   margin-top: 30px;
+  @media screen and (max-width: 768px) {
+    font-size: 10px;
+  }
 }
 
 .displayArea {
@@ -209,8 +213,14 @@
 
 .imgNotSelected {
   transform: translateX(100%);
+  @media screen and (max-width: 768px) {
+    transform: translateY(-100%);
+  }
 }
 
 .imgSelected {
   transform: translateX(0);
+  @media screen and (max-width: 768px) {
+    transform: translateY(-0);
+  }
 }
