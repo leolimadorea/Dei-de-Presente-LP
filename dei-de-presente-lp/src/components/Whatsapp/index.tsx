@@ -14,7 +14,7 @@ const WhatsApp = () => {
       <LottiePlayer
         animationData={newWhatsapp}
         play
-        style={{ width: 150, height: 150 }} // Adjust size as needed
+        style={{ width: 100, height: 100 }} // Adjust size as needed
       />
     </Link>
   );

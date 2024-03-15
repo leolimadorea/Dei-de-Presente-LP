@@ -1,12 +1,12 @@
-import AnimatedCircles from '@/components/AnimatedCircles';
-import ImageCarousel from '@/components/Carousel';
-import Footer from '@/components/Footer';
-import Header from '@/components/Header';
-import MenuHamburguer from '@/components/MenuHamburguer';
-import StepComponent from '@/components/StepComponent';
-import styles from '@/styles/Home.module.scss';
-import dynamic from 'next/dynamic';
-import React, { useEffect, useState } from 'react';
+import AnimatedCircles from "@/components/AnimatedCircles";
+import ImageCarousel from "@/components/Carousel";
+import Footer from "@/components/Footer";
+import Header from "@/components/Header";
+import MenuHamburguer from "@/components/MenuHamburguer";
+import StepComponent from "@/components/StepComponent";
+import styles from "@/styles/Home.module.scss";
+import dynamic from "next/dynamic";
+import React, { useEffect, useState } from "react";
 
 interface Theme {
   id: number;
@@ -18,22 +18,22 @@ interface Theme {
 const themes: Theme[] = [
   {
     id: 1,
-    name: 'BALADA',
-    description: 'Tema de festa, um dos mais modernos e extravagantes.',
-    image: '/balada.svg',
+    name: "BALADA",
+    description: "Tema de festa, um dos mais modernos e extravagantes.",
+    image: "/balada.svg",
   },
   {
     id: 2,
-    name: 'CASAMENTO',
-    description: 'Tema minimalista, com muito sentimento e elegância.',
-    image: '/casamento.svg',
+    name: "CASAMENTO",
+    description: "Tema minimalista, com muito sentimento e elegância.",
+    image: "/casamento.svg",
   },
   {
     id: 3,
-    name: 'ANIVERSÁRIO',
+    name: "ANIVERSÁRIO",
     description:
-      'Seguindo a temática de aniversário, ideal para qualquer celebração de aniversário',
-    image: '/aniver.svg',
+      "Seguindo a temática de aniversário, ideal para qualquer celebração de aniversário",
+    image: "/aniver.svg",
   },
 ];
 
@@ -46,11 +46,11 @@ export default function Home() {
       setIsFixed(window.pageYOffset > 50);
     };
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const NoSSRLottie = dynamic(() => import('../components/Whatsapp'), {
+  const NoSSRLottie = dynamic(() => import("../components/Whatsapp"), {
     ssr: false,
   });
 
@@ -58,7 +58,7 @@ export default function Home() {
     <>
       <main className={styles.container}>
         <div className={styles.menuHamburguer}>
-          <MenuHamburguer />
+          <MenuHamburguer fixed={isFixed} />
         </div>
         <div className={styles.header}>
           <Header fixed={isFixed} />
