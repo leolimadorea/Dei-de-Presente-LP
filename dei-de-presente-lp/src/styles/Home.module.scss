@@ -82,6 +82,11 @@
 
 .movingBars {
   padding-block: 100px;
+  @media screen and (max-width: 768px) {
+    padding-block: 0;
+    padding-top: 100px;
+    padding-bottom: 30px;
+  }
 }
 
 .topBar {
@@ -164,6 +169,7 @@
   padding-block: 40px;
   @media screen and (max-width: 768px) {
     padding-block: 20px;
+    bottom: 33px;
   }
 }
 
@@ -232,6 +238,7 @@
   @media screen and (max-width: 768px) {
     align-items: flex-start;
     padding-left: 20px;
+    padding-top: 70px;
   }
 }
 
