@@ -64,15 +64,16 @@ export default function Home() {
           <Header fixed={isFixed} />
         </div>
         <div className={styles.title}>
-          <h1>Dar e receber presentes </h1>
-          <h1>ficou ainda melhor!</h1>
+          <h1>
+            Dar e receber presentes <br />
+            ficou ainda melhor!
+          </h1>
+
           <div>
             <h5>
               com o <strong>dei de presente</strong> você tem um site para o seu
-              evento e
-            </h5>
-            <h5>
-              cria listas de uma maneira prática, rápida e muuuuito fácil.
+              evento e <br /> cria listas de uma maneira prática, rápida e
+              muuuuito fácil.
             </h5>
           </div>
         </div>
@@ -120,7 +121,7 @@ export default function Home() {
                 com seu evento e crie seu site.
               </p>
             </div>
-            <div className={styles.iconsRight}>
+            <div className={styles.arrow}>
               <img src="/rightArrow.svg" />
             </div>
             <div className={styles.iconsRight}>
@@ -131,7 +132,7 @@ export default function Home() {
                 exclusivos da sua festa!
               </p>
             </div>
-            <div className={styles.icons}>
+            <div className={styles.arrow}>
               <img src="/bottomArrow.svg" />
             </div>
             <div className={styles.icons}>
@@ -142,7 +143,7 @@ export default function Home() {
                 convidados!
               </p>
             </div>
-            <div className={styles.icons}>
+            <div className={styles.arrow}>
               <img src="/rightArrow.svg" />
             </div>
             <div className={styles.iconsRight}>
