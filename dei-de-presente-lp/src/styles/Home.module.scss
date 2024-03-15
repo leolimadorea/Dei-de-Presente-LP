@@ -102,6 +102,9 @@
   position: relative;
   right: 10px;
   width: 110%;
+  @media screen and (max-width: 768px) {
+    padding-block: 20px;
+  }
 }
 
 .topBarContent {
@@ -120,6 +123,9 @@
     font-weight: 600;
     line-height: 27px; /* 112.5% */
     letter-spacing: 0.167px;
+    @media screen and (max-width: 768px) {
+      font-size: 12px;
+    }
   }
 }
 
@@ -156,6 +162,9 @@
   margin-bottom: 15px;
   filter: blur(1.2247905731px);
   padding-block: 40px;
+  @media screen and (max-width: 768px) {
+    padding-block: 20px;
+  }
 }
 
 .bottomBarContent {
@@ -174,6 +183,9 @@
     font-weight: 600;
     line-height: 27px; /* 112.5% */
     letter-spacing: 0.167px;
+    @media screen and (max-width: 768px) {
+      font-size: 12px;
+    }
   }
 }
 
