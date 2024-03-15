@@ -68,7 +68,6 @@ export default function Home() {
             Dar e receber presentes <br />
             ficou ainda melhor!
           </h1>
-
           <div>
             <h5>
               com o <strong>dei de presente</strong> você tem um site para o seu

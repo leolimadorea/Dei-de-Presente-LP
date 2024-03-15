@@ -1,5 +1,6 @@
-import { useEffect, useState } from 'react';
-import styles from './styles.module.scss';
+import { useRouter } from "next/router";
+import { useEffect, useState } from "react";
+import styles from "./styles.module.scss";
 
 interface Theme {
   id: number;
@@ -12,27 +13,32 @@ export default function ThemeListComponent() {
   const themes: Theme[] = [
     {
       id: 1,
-      name: 'BALADA',
-      description: 'Tema de festa, um dos mais modernos e extravagantes.',
-      image: '/balada.svg',
+      name: "BALADA",
+      description: "Tema de festa, um dos mais modernos e extravagantes.",
+      image: "/balada.svg",
     },
     {
       id: 2,
-      name: 'CASAMENTO',
-      description: 'Tema minimalista, com muito sentimento e elegância.',
-      image: '/casamento.svg',
+      name: "CASAMENTO",
+      description: "Tema minimalista, com muito sentimento e elegância.",
+      image: "/casamento.svg",
     },
     {
       id: 3,
-      name: 'ANIVERSÁRIO',
+      name: "ANIVERSÁRIO",
       description:
-        'Seguindo a temática de aniversário, ideal para qualquer celebração de aniversário.',
-      image: '/aniver.svg',
+        "Seguindo a temática de aniversário, ideal para qualquer celebração de aniversário.",
+      image: "/aniver.svg",
     },
   ];
 
   const [selectedTheme, setSelectedTheme] = useState<Theme>(themes[0]);
   const [imageClassName, setImageClassName] = useState(styles.imgNotSelected);
+  const router = useRouter();
+
+  const handleEnterClick = () => {
+    router.push("https://deidepresente.com");
+  };
 
   useEffect(() => {
     setImageClassName(styles.imgSelected);
@@ -65,13 +71,13 @@ export default function ThemeListComponent() {
             <li
               key={theme.id}
               className={`${styles.option} ${
-                selectedTheme.id === theme.id ? styles.selected : ''
+                selectedTheme.id === theme.id ? styles.selected : ""
               }`}
               onClick={() => setSelectedTheme(theme)}
             >
               <div className={styles.optionHeader}>
                 <span className={styles.optionNumber}>
-                  {(index + 1).toString().padStart(2, '0')}
+                  {(index + 1).toString().padStart(2, "0")}
                 </span>
                 <div className={styles.optionContainer}>
                   <h3 className={styles.optionTitle}>{theme.name}</h3>
@@ -80,7 +86,12 @@ export default function ThemeListComponent() {
                   </p>
                 </div>
                 {selectedTheme?.id === theme.id && (
-                  <button className={styles.myButton}>Quero o meu</button>
+                  <button
+                    className={styles.myButton}
+                    onClick={handleEnterClick}
+                  >
+                    Quero o meu
+                  </button>
                 )}
               </div>
             </li>

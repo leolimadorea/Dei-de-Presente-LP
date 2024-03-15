@@ -1,3 +1,5 @@
+import Link from "next/link";
+import { useRouter } from "next/router";
 import styles from "./styles.module.scss";
 
 interface HeaderProps {
@@ -5,6 +7,16 @@ interface HeaderProps {
 }
 
 const Header = ({ fixed }: HeaderProps) => {
+  const router = useRouter();
+
+  const handleEnterClick = () => {
+    router.push("https://deidepresente.com");
+  };
+
+  const handleCreateClick = () => {
+    router.push("https://deidepresente.com/create");
+  };
+
   return (
     <>
       <main className={`${styles.header} ${fixed ? styles.fixed : ""}`}>
@@ -14,14 +26,25 @@ const Header = ({ fixed }: HeaderProps) => {
           </div>
           <div className={styles.rightside}>
             <div className={styles.themes}>
-              <h5>CASAMENTO</h5>
-              <h5>ANIVERSÁRIO</h5>
-              <h5>BALADA</h5>
+              <Link href="https://deidepresente.com/create">
+                <h5>CASAMENTO</h5>
+              </Link>
+              <Link href="https://deidepresente.com/create">
+                <h5>ANIVERSÁRIO</h5>
+              </Link>
+              <Link href="https://deidepresente.com/create">
+                <h5>BALADA</h5>
+              </Link>
             </div>
             <hr className={styles.hr} />
             <div className={styles.buttons}>
-              <button className={styles.enter}>ENTRAR</button>
-              <button className={styles.create}>CRIAR SITE</button>
+              <button className={styles.enter} onClick={handleEnterClick}>
+                ENTRAR
+              </button>
+
+              <button className={styles.create} onClick={handleCreateClick}>
+                CRIAR SITE
+              </button>
             </div>
           </div>
         </div>
