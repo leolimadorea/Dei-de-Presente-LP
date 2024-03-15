@@ -35,17 +35,12 @@ export default function ThemeListComponent() {
   const [imageClassName, setImageClassName] = useState(styles.imgNotSelected);
 
   useEffect(() => {
-    // This ensures the transition effect applies whenever a new theme is selected
     setImageClassName(styles.imgSelected);
   }, [selectedTheme]);
 
   useEffect(() => {
-    // Assim que um novo tema é selecionado, esta função é chamada.
-    // Primeiro, aplicamos a classe 'imgNotSelected' para iniciar fora da tela
     setImageClassName(styles.imgNotSelected);
 
-    // Em seguida, usamos um timeout para alterar para 'imgSelected' após um breve momento.
-    // Isso cria a transição suave de entrada.
     const timer = setTimeout(() => {
       setImageClassName(styles.imgSelected);
     }, 150);

@@ -1,6 +1,10 @@
 .themesContainer {
   background: #057780;
   padding-block: 120px;
+  @media screen and (max-width: 768px) {
+    padding-inline: 20px;
+    padding-block: 80px;
+  }
 }
 
 .themeTitle {
@@ -11,6 +15,9 @@
   padding-left: 30px;
   max-width: 1440px;
   margin: 0 auto;
+  @media screen and (max-width: 768px) {
+    padding-left: 0;
+  }
 
   h5 {
     color: #fff;
@@ -32,6 +39,9 @@
     line-height: 39px;
     text-transform: uppercase;
     display: flex;
+    @media screen and (max-width: 768px) {
+      font-size: 20px;
+    }
   }
   p {
     color: #f8c64d;
@@ -42,6 +52,9 @@
     line-height: 39px;
     text-transform: uppercase;
     padding-left: 5px;
+    @media screen and (max-width: 768px) {
+      font-size: 20px;
+    }
   }
 }
 
@@ -49,16 +62,25 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  padding: 20px;
+
   color: #fff;
   max-width: 1440px;
   margin: 0 auto;
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+  }
 }
 
 .optionsList {
   width: 45%;
   display: flex;
   flex-direction: column;
+  @media screen and (max-width: 768px) {
+    flex-direction: row;
+    overflow: auto;
+    width: 100%;
+    height: 350px;
+  }
 }
 .optionContainer {
   align-items: center;
@@ -102,6 +124,15 @@
 
     .myButton {
       display: block;
+    }
+    @media screen and (max-width: 768px) {
+      border-left: unset !important;
+      border-top: 5px solid #fff;
+      background: linear-gradient(
+        180deg,
+        rgba(255, 255, 255, 0.15) 65.74%,
+        rgba(255, 255, 255, 0) 101.31%
+      ) !important;
     }
   }
 }
@@ -164,6 +195,9 @@
 .displayArea {
   width: 50%;
   overflow: hidden;
+  @media screen and (max-width: 768px) {
+    width: 100%;
+  }
 }
 .displayArea img {
   width: 100%;
