@@ -23,7 +23,7 @@ const Cookies = () => {
   return (
     <section className={styles.container}>
       <div className={styles.contentCookiesDesktop}>
-        <img src="/cookie.png" alt="Cookie" />
+        <img src="/cookie.png" />
         <p>
           O nosso site utiliza cookies para melhorar a sua experiência de
           navegação. Ao clicar em &quot;Concordar e fechar&quot;, você concorda
@@ -33,10 +33,10 @@ const Cookies = () => {
       </div>
       <div className={styles.contentCookiesMobile}>
         <p>
-          <img src="/biscoito.png" alt="Cookie" />O nosso site utiliza cookies
-          para melhorar a sua experiência de navegação. Ao clicar em
-          &quot;Concordar e fechar&quot;, você concorda com o uso de cookies,
-          termos e a Política de Privacidade.
+          <img src="/cookie.png" />O nosso site utiliza cookies para melhorar a
+          sua experiência de navegação. Ao clicar em &quot;Concordar e
+          fechar&quot;, você concorda com o uso de cookies, termos e a Política
+          de Privacidade.
         </p>
 
         <button onClick={handleAccept}>Concordar e fechar</button>

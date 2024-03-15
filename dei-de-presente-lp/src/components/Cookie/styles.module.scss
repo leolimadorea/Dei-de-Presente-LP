@@ -25,7 +25,7 @@
   }
 
   a {
-    color: #8000ff;
+    color: #fff;
     text-decoration: underline;
   }
 
@@ -37,9 +37,10 @@
   button {
     min-width: 180px;
     padding-block: 6px;
-    background: #8000ff;
-    color: #fff;
+    background: #fff;
+    color: #07a7b3;
     border-radius: 5px;
+    border: none;
   }
 
   @media only screen and (max-width: 768px) {
@@ -71,16 +72,15 @@
   }
 
   a {
-    color: #8000ff;
+    color: #fff;
   }
 
   button {
-    margin-left: auto;
-    width: 100%;
+    min-width: 180px;
     padding-block: 6px;
-    background: #8000ff;
-    color: #fff;
+    background: #fff;
+    color: #07a7b3;
     border-radius: 5px;
-    margin-top: 5px;
+    border: none;
   }
 }
