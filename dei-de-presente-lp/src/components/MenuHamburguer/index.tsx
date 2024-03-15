@@ -1,57 +1,45 @@
-import React, { useState } from "react";
-import HamburguerMenu from "@/icons/HamburguerMenu";
-import WhiteLogo from "/public.whitelogo.svg";
+import { useState } from "react";
 import styles from "./styles.module.scss";
 
-const MenuHamburguer: React.FC = () => {
-  const [isOpen, setIsOpen] = useState(false);
-
-  const toggleMenu = () => {
-    setIsOpen(!isOpen);
-  };
-
-  const closeModal = () => {
-    setIsOpen(false);
-  };
+const Header = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
     <>
-      <div className={styles.logo}>
-        <img src="/whitelogo.svg" />
-      </div>
-      <div className={styles.menuHamburguer}>
-        <div className={styles.menuToggle} onClick={toggleMenu}>
-          <HamburguerMenu />
+      <main className={styles.header}>
+        <div className={styles.content}>
+          <div className={styles.logo}>
+            <img src="/logo2.svg" alt="Logo" />
+          </div>
+          <div
+            className={`${styles.menuIcon} ${isMenuOpen ? styles.open : ""}`}
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+          >
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
         </div>
-        {isOpen && (
+        {isMenuOpen && (
           <div className={styles.modal}>
-            <div className={styles.modalContent}>
-              <span className={styles.close} onClick={closeModal}>
-                &times;
-              </span>
-              <ul className={styles.menuItens}>
-                <li onClick={() => (window.location.href = "/casamento")}>
-                  Casamento
-                </li>
-                <li onClick={() => (window.location.href = "/aniversario")}>
-                  Aniversário
-                </li>
-                <li onClick={() => (window.location.href = "/balada")}>
-                  Balada
-                </li>
-                <li onClick={() => (window.location.href = "/entrar")}>
-                  Entrar na conta
-                </li>
-                <li onClick={() => (window.location.href = "/criar-site")}>
-                  Criar site
-                </li>
-              </ul>
+            <div className={styles.themes}>
+              <h5>CASAMENTO</h5>
+              <h5>ANIVERSÁRIO</h5>
+              <h5>BALADA</h5>
+            </div>
+            <hr className={styles.hr} />
+            <div className={styles.buttons}>
+              <button className={styles.enter}>ENTRAR</button>
+              <button className={styles.create}>CRIAR SITE</button>
             </div>
           </div>
         )}
-      </div>
+      </main>
+      {isMenuOpen && (
+        <div className={styles.backdrop} onClick={() => setIsMenuOpen(false)} />
+      )}
     </>
   );
 };
 
-export default MenuHamburguer;
+export default Header;

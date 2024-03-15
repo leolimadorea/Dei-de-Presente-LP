@@ -169,7 +169,6 @@ export default function Home() {
           </div>
         </div>
         <StepComponent />
-
         <AnimatedCircles className={styles.round}>
           <div className={styles.roundContent}>
             <div className={styles.leftSide}>

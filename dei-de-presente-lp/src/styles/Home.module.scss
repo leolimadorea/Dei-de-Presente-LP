@@ -198,7 +198,7 @@
 }
 
 .texts {
-  font-family: 'montserrat', sans-serif;
+  font-family: "montserrat", sans-serif;
   padding-top: 8rem;
   color: black;
   display: flex;
@@ -607,10 +607,10 @@
 }
 
 .menuHamburguer {
-  justify-content: flex-end;
   display: none;
   @media screen and (max-width: 768px) {
     display: flex;
+    justify-content: space-between;
   }
 }
 .header {
