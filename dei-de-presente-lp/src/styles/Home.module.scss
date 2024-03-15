@@ -15,6 +15,10 @@
   padding-bottom: 60px;
   gap: 17px;
   justify-content: center;
+  @media screen and (max-width: 768px) {
+    gap: 20px;
+    padding-inline: 25px;
+  }
   h1 {
     color: #fff;
     text-align: center;
@@ -482,6 +486,9 @@
 .round {
   padding-inline: 150px;
   padding-block: 200px;
+  @media screen and (max-width: 768px) {
+    padding-inline: 40px;
+  }
 }
 .roundContent {
   max-width: 1440px;
@@ -489,12 +496,18 @@
   justify-content: center;
   align-items: center;
   margin: 0 auto;
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+  }
 }
 
 .leftSide {
   display: flex;
   flex-direction: column;
   gap: 55px;
+  @media screen and (max-width: 768px) {
+    gap: 25px;
+  }
   h5 {
     color: #057780;
     font-family: Montserrat;
@@ -503,6 +516,14 @@
     font-weight: 700;
     line-height: 43px; /* 86% */
     letter-spacing: 0.167px;
+    @media screen and (max-width: 768px) {
+      color: #057780;
+      font-family: Montserrat;
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 29px; /* 120.833% */
+    }
   }
   p {
     color: #057780;
@@ -512,6 +533,15 @@
     font-weight: 500;
     line-height: 43px; /* 179.167% */
     letter-spacing: 0.167px;
+    @media screen and (max-width: 768px) {
+      color: #057780;
+      font-family: Montserrat;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 29px; /* 181.25% */
+      letter-spacing: 0.167px;
+    }
   }
 }
 
